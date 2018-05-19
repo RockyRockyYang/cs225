@@ -1,0 +1,270 @@
+################################
+##                            ##
+##     Grading question 9     ##
+##                            ##
+################################
+> :: Compiling...
+> g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function   -c -o binarytree_q9.o binarytree_q9.cpp
+> :: Compiled successfully!
+> :: Trying to compile binarytree_q10.cpp...
+> g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function   -c -o binarytree_q10.o binarytree_q10.cpp
+> binarytree_q10.cpp:11: warning: unused parameter 'subRoot'
+> binarytree_q10.cpp:11: warning: unused parameter 'value'
+> :: Compiling provided code...
+> 
+> :: Compiling test_empty.
+> :: Running test_empty.
+> Finding minimum root-to-leaf distance in:
+> (empty)
+> Result: -1
+> Expected: -1 (credit given for -1)
+> :: Passed test_empty.
+> 
+> :: Compiling test_single.
+> :: Running test_single.
+> Finding minimum root-to-leaf distance in:
+>  1
+> Result: 0
+> Expected: 0 (credit given for 0)
+> :: Passed test_single.
+> 
+> :: Compiling test_multi1.
+> :: Running test_multi1.
+> Finding minimum root-to-leaf distance in:
+>           __ 1 __
+>        __/       \__
+>      5               3
+>    /   \           /   \
+>  19      7       5       1
+>                 /       /
+>                2       3
+> Result: 2
+> Expected: 2 (credit given for 2)
+> :: Passed test_multi1.
+> 
+> :: Compiling test_multi2.
+> :: Running test_multi2.
+> Finding minimum root-to-leaf distance in:
+>                       ______ 1 ______
+>                ______/               \______
+>           __ 3                            __ 1 __
+>        __/                             __/       \__
+>      5                               19              2
+>    /                                               /
+>  5                                               3
+>                                                 /
+>                                                7
+> Result: 2
+> Expected: 2
+> :: Passed test_multi2.
+> 
+> :: Compiling test_multi3.
+> :: Running test_multi3.
+> Finding minimum root-to-leaf distance in:
+>                       ______ 1 ______
+>                ______/               \______
+>           __ 1 __                            3 __
+>        __/       \__                             \__
+>      2               19                              5
+>    /   \           /                               /
+>  3       7       20                              5
+>   \     /                                         \
+>    3   1                                           18
+> Result: 3
+> Expected: 3
+> :: Passed test_multi3.
+> 
+> :: Compiling test_multi4.
+> :: Running test_multi4.
+> Finding minimum root-to-leaf distance in:
+>                                               ______________ 15 _____________
+>                                ______________/                               \______________
+>                       ______ 10 _____                                                 ______ 18 _____
+>                ______/               \______                                   ______/               \______
+>           __ 41 _                         __ 25 _                         __ 21 _                         __ 10 _
+>        __/       \__                   __/       \__                   __/       \__                   __/       \__
+>      4               31              28              23              41              48              4               27
+>    /   \           /   \           /                   \           /               /               /   \           /
+>  43      18      24      43      30                      5       21              18              34      44      33
+>   \               \                                     /                                                       /
+>    21              29                                  23                                                      36
+> Result: 4
+> Expected: 4
+> :: Passed test_multi4.
+Grade for question 9: 100/100
+
+#################################
+##                             ##
+##     Grading question 10     ##
+##                             ##
+#################################
+> :: Compiling...
+> g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function   -c -o binarytree_q10.o binarytree_q10.cpp
+> binarytree_q10.cpp:11: warning: unused parameter 'subRoot'
+> binarytree_q10.cpp:11: warning: unused parameter 'value'
+> :: Compiled successfully!
+> :: Trying to compile binarytree_q9.cpp...
+> g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function   -c -o binarytree_q9.o binarytree_q9.cpp
+> :: Compiling provided code...
+> 
+> :: Compiling test_empty.
+> :: Running test_empty.
+> Finding node closest to 5 in:
+> (empty)
+> Result:   NULL
+> Expected: NULL
+> :: Passed test_empty.
+> 
+> :: Compiling test_single_same.
+> :: Running test_single_same.
+> Finding node closest to 5 in:
+>  5
+> Result:   NULL
+> Expected: 5 (0x204a030)
+> :: Failed test_single_same.
+> 
+> :: Compiling test_single_different.
+> :: Running test_single_different.
+> Finding node closest to 8 in:
+>  5
+> Result:   NULL
+> Expected: 5 (0x1ff7030)
+> :: Failed test_single_different.
+> 
+> :: Compiling test_multi_same1.
+> :: Running test_multi_same1.
+> Finding node closest to 5 in:
+>                                   ______________ 35 _____________
+>                    ______________/                               \______________
+>           ______ 1 ______                                                 ______ 38 _____
+>    ______/               \______                                   ______/               \______
+>  0 __                         __ 29 _                            35 _                         __ 44 _
+>      \__                   __/       \__                             \__                   __/       \__
+>          0               18              32                              37              41              46
+>                        /   \                                                                           /   \
+>                      5       26                                                                      45      48
+>                       \     / \
+>                        9   20  27
+> Result:   NULL
+> Expected: 5 (0x236b270)
+> :: Failed test_multi_same1.
+> 
+> :: Compiling test_multi_same2.
+> :: Running test_multi_same2.
+> Finding node closest to 32 in:
+>                                                                                   ______________________________ 25 _____________________________
+>                                                    ______________________________/                                                               \______________________________
+>                                   ______________ 10 _____________                                                                                                 ______________ 48
+>                    ______________/                               \______________                                                                   ______________/
+>           ______ 4                                                        ______ 15 _____                                                 ______ 32 _____
+>    ______/                                                         ______/               \______                                   ______/               \______
+>  1                                                               10                           __ 21 _                            29 _                         __ 34 _
+>                                                                                            __/       \__                             \__                   __/       \__
+>                                                                                          17              21                              29              32              44
+>                                                                                                            \                                                           /   \
+>                                                                                                              21                                                      43      44
+>                                                                                                                                                                               \
+>                                                                                                                                                                                45
+> Result:   NULL
+> Expected: 32 (0x23210d0) or 32 (0x2321190)
+> :: Failed test_multi_same2.
+> 
+> :: Compiling test_multi_different1.
+> :: Running test_multi_different1.
+> Finding node closest to 2 in:
+>                                                                                           ______________________________ 27 _____________________________
+>                                                            ______________________________/                                                               \______________________________
+>                                           ______________ 18 _____________                                                                                                 ______________ 31 _____________
+>                            ______________/                               \______________                                                                   ______________/                               \______________
+>                   ______ 6 ______                                                 ______ 26                                                              29                                                       ______ 38 _____
+>            ______/               \______                                   ______/                                                                                                                         ______/               \______
+>       __ 4 __                         __ 10 _                            19 _                                                                                                                         __ 35 _                         __ 41 _
+>    __/       \__                   __/       \__                             \__                                                                                                                   __/       \__                   __/       \__
+>  0               4               8               11                              25                                                                                                              34              36              39              48
+>    \                               \               \                                                                                                                                                                                           /   \
+>      1                               9               17                                                                                                                                                                                      41      48
+>     /                                 \                                                                                                                                                                                                       \
+>    0                                   9                                                                                                                                                                                                       45
+> Result:   NULL
+> Expected: 1 (0x12d6210)
+> :: Failed test_multi_different1.
+> 
+> :: Compiling test_multi_different2.
+> :: Running test_multi_different2.
+> Finding node closest to 5 in:
+>                                                                                           ______________________________ 19 _____________________________
+>                                                            ______________________________/                                                               \______________________________
+>                                           ______________ 11 _____________                                                                                                 ______________ 23 _____________
+>                            ______________/                               \______________                                                                   ______________/                               \______________
+>                   ______ 2 ______                                                 ______ 16 _____                                                        20                                                       ______ 38 _____
+>            ______/               \______                                   ______/               \______                                                                                                   ______/               \______
+>       __ 1                               3 __                            12 _                            16 _                                                                                         __ 31 _                            40 _
+>    __/                                       \__                             \__                             \__                                                                                   __/       \__                             \__
+>  0                                               9                               14                              18                                                                              24              37                              43
+>                                                /                                                               /                                                                                   \           /   \                           /   \
+>                                              7                                                               16                                                                                      27      33      37                      40      43
+>                                                                                                                                                                                                                       \
+>                                                                                                                                                                                                                        37
+> Result:   NULL
+> Expected: 3 (0x14792b0) or 7 (0x1479370)
+> :: Failed test_multi_different2.
+> 
+> :: Compiling test_multi_different3.
+> :: Running test_multi_different3.
+> Finding node closest to 42 in:
+>                                                                                   ______________________________ 35 _____________________________
+>                                                    ______________________________/                                                               \______________________________
+>                                   ______________ 21 _____________                                                                                                 ______________ 45 _____________
+>                    ______________/                               \______________                                                                   ______________/                               \______________
+>           ______ 9 ______                                                 ______ 25 _____                                                        40 _____                                                 ______ 49 _____
+>    ______/               \______                                   ______/               \______                                                         \______                                   ______/               \______
+>  1 __                         __ 16 _                            22 _                         __ 32 _                                                         __ 43 _                            47                              49
+>      \__                   __/       \__                             \__                   __/       \__                                                   __/       \__
+>          3               9               20                              22              31              32                                              41              44
+>        /                   \           /
+>      2                       9       18
+>                               \
+>                                12
+> Result:   NULL
+> Expected: 43 (0xdf0160) or 41 (0xdf01e0)
+> :: Failed test_multi_different3.
+> 
+> :: Compiling test_multi_different4.
+> :: Running test_multi_different4.
+> Finding node closest to 1 in:
+>                                               ______________ 30 _____________
+>                                ______________/                               \______________
+>                       ______ 23 _____                                                 ______ 36 _____
+>                ______/               \______                                   ______/               \______
+>           __ 15 _                         __ 25                           __ 32 _                         __ 40 _
+>        __/       \__                   __/                             __/       \__                   __/       \__
+>      8               16              23                              30              32              39              46
+>    /   \               \                                               \               \           /               /   \
+>  6       12              18                                              30              34      37              41      48
+>         /               / \                                                                       \             / \
+>        8               17  22                                                                      38          40  41
+> Result:   NULL
+> Expected: 6 (0xaee330)
+> :: Failed test_multi_different4.
+> 
+> :: Compiling test_multi_different5.
+> :: Running test_multi_different5.
+> Finding node closest to 55 in:
+>                                               ______________ 30 _____________
+>                                ______________/                               \______________
+>                       ______ 23 _____                                                 ______ 36 _____
+>                ______/               \______                                   ______/               \______
+>           __ 15 _                         __ 25                           __ 32 _                         __ 40 _
+>        __/       \__                   __/                             __/       \__                   __/       \__
+>      8               16              23                              30              32              39              46
+>    /   \               \                                               \               \           /               /   \
+>  6       12              18                                              30              34      37              41      48
+>         /               / \                                                                       \             / \
+>        8               17  22                                                                      38          40  41
+> Result:   NULL
+> Expected: 48 (0x1ed8230)
+> :: Failed test_multi_different5.
+Grade for question 10: 18.18/100
+
+
+Total score: 100*0.14 + 18.18*0.06 = 15.0908/20

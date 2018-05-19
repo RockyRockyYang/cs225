@@ -1,0 +1,57 @@
+#########################################
+##                                     ##
+##     Grading question exam4-heap     ##
+##                                     ##
+#########################################
+:: Compiling...
+g++ -std=c++0x -c -g -O0 -Wall -Wextra -Wno-unused-function -o heap.o heap_wrapper.cpp
+In file included from heap_wrapper.cpp:9:
+heap.cpp: In function 'void prune(MaxHeap&, int)':
+heap.cpp:9: warning: comparison between signed and unsigned integer expressions
+:: Compiled successfully!
+:: Compiling provided code...
+
+:: Compiling test_empty.
+:: Running test_empty.
+Removing elements smaller than 100 in: [ ]
+Result:   [ ]
+Expected: [ ]
+:: Passed test_empty.
+
+:: Compiling test_single.
+:: Running test_single.
+Removing elements smaller than 299 in: [300]
+Result:   [300]
+Expected: [300]
+:: Passed test_single.
+
+:: Compiling test_simple1.
+:: Running test_simple1.
+Removing elements smaller than 29 in: [500, 300, 150, 110, 90, 30, 10, 4]
+Result:   [500, 300, 150, 110, 90, 30]
+Expected: [500, 300, 150, 110, 90, 30]
+:: Passed test_simple1.
+
+:: Compiling test_simple2.
+:: Running test_simple2.
+Removing elements smaller than 999 in: [370, 360, 350, 340, 330, 320, 310, 300, 150, 110, 90, 30, 10, 4]
+Result:   [ ]
+Expected: [ ]
+:: Passed test_simple2.
+
+:: Compiling test_complete1.
+:: Running test_complete1.
+Removing elements smaller than 301 in: [380, 370, 360, 350, 340, 330, 320, 310, 300, 150, 110, 90, 30, 10, 4]
+Result:   [380, 370, 360, 350, 340, 330, 320, 310]
+Expected: [380, 370, 360, 350, 340, 330, 320, 310]
+:: Passed test_complete1.
+
+:: Compiling test_complete2.
+:: Running test_complete2.
+Removing elements smaller than 3 in: [300, 150, 110, 90, 30, 10, 4]
+Result:   [300, 150, 110, 90, 30, 10, 4]
+Expected: [300, 150, 110, 90, 30, 10, 4]
+:: Passed test_complete2.
+
+Grade for question exam4-heap: 100/100
+

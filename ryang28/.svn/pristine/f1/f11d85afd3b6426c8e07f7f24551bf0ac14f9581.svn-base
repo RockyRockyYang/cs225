@@ -1,0 +1,26 @@
+Grading r6185 by ryang28 committed on Sat Jan 30 18:36:25 CST 2016
+Monad Autograder
+Testing mp2.1 at 2016-02-03 00:36:21
+
+"Measuring programming progress by lines of code is like measuring aircraft building progress by weight." ~ Bill Gates
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+InvertColorsEven  . . [30 pts] - passed
+FlipLeftEven  . . . . [15 pts] - passed
+FlipLeftOdd . . . . . [15 pts] - passed
+AdjustBrightnessEven  [10 pts] - passed
+AdjustBrightnessEven2 [10 pts] - passed
+AdjustBrightnessEven3 [10 pts] - passed
+ImageMakefile . . . . [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

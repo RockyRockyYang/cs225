@@ -1,0 +1,73 @@
+Grading r1942 by ryang28 on 2016-01-22T23:33:48.791803Z
+Monad Autograder
+Testing lab_intro at 2016-01-25 01:58:17
+
+"If debugging is the process of removing bugs, then programming must be the process of putting them in." ~ Edsger W. Dijkstra
+
+Setting up test environment...
+Compiling...
+================================================================
+rgbapixel.cpp:7:10: warning: unused variable 'red' [-Wunused-variable]
+        uint8_t red = 255;
+                ^
+rgbapixel.cpp:8:10: warning: unused variable 'green' [-Wunused-variable]
+        uint8_t green = 255;
+                ^
+rgbapixel.cpp:9:10: warning: unused variable 'blue' [-Wunused-variable]
+        uint8_t blue = 255;
+                ^
+rgbapixel.cpp:10:10: warning: unused variable 'alpha' [-Wunused-variable]
+        uint8_t alpha = 255;    
+                ^
+4 warnings generated.
+main.cpp:102:37: warning: unused parameter 'secondImage' [-Wunused-parameter]
+PNG blendImages(PNG firstImage, PNG secondImage)
+                                    ^
+1 warning generated.
+rgbapixel.cpp:7:10: warning: unused variable 'red' [-Wunused-variable]
+        uint8_t red = 255;
+                ^
+rgbapixel.cpp:8:10: warning: unused variable 'green' [-Wunused-variable]
+        uint8_t green = 255;
+                ^
+rgbapixel.cpp:9:10: warning: unused variable 'blue' [-Wunused-variable]
+        uint8_t blue = 255;
+                ^
+rgbapixel.cpp:10:10: warning: unused variable 'alpha' [-Wunused-variable]
+        uint8_t alpha = 255;    
+                ^
+4 warnings generated.
+main.cpp:102:37: warning: unused parameter 'secondImage' [-Wunused-parameter]
+PNG blendImages(PNG firstImage, PNG secondImage)
+                                    ^
+1 warning generated.
+
+
+Running tests...
+================================================================
+testBrighten  . [33 pts] - passed
+testCrosshairs  [33 pts] - passed
+testBlendImages [34 pts] - FAILED: unit_tests.cpp:109: Assertion (abs((image1(x, y)->red + image2(x, y)->red)/2 - blended(x, y)->red) <= 1) failed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 66
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+testBlendImages [34 points]
+Result: FAILED: unit_tests.cpp:109: Assertion (abs((image1(x, y)->red + image2(x, y)->red)/2 - blended(x, y)->red) <= 1) failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 66
+

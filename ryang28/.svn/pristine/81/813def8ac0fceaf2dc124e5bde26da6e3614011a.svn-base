@@ -1,0 +1,254 @@
+Exam 3 Multiple Choice Questions
+
+- These questions may not be in the same order as what you saw on the exam.
+- Your answer is indicated by a '->'
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the following partial C++ code:
+
+    #include <iostream>
+    #include <list>
+    using namespace std;
+
+    template<class Iter, class Formatter>
+    bool mystery(Iter first, Iter second, Formatter runit) {
+        Iter temp = first;
+        bool p = true;
+        while (!(second == temp)) {
+            p = (p && runit(*first, *second));
+            first++;
+            second--;
+        }
+        return p;
+    }
+
+    class noClue {
+
+        public:
+
+        bool operator()(int a, int b) {
+            return (a==b);
+        }
+    };
+
+    int main() {
+        list<int> s;
+        // list insertions here
+        list<int>::iterator it1 = s.begin();
+        list<int>::iterator it2 = s.end();
+        it2--;
+        noClue nc;
+
+        if ( mystery<list<int>::iterator, noClue>(it1, it2, nc))
+            cout << "yes" << endl;
+        else
+            cout << "no" << endl;
+        return 0;
+    }
+
+Which of the following statements is true?
+
+Choices:
+   a. None of these options describes the behavior of this code.
+   b. This code does not compile because of a syntax error in the template
+      instantiation for mystery.
+   c. If the list consists of the integers 1, 2, 3, 2, 1, 4 in that order,
+      with the first item on the left, then the output is "yes".
+   d. This code does not compile because of a type mismatch in the mystery
+      parameter list.
+-> e. If the list consists of the integers 1, 2, 3, 2, 1 in that order, with
+      the first item on the left, then the output is "yes".
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the following code:
+
+    #include <iostream>
+    using namespace std;
+
+    class dunno
+    {
+        public:
+
+        int operator()(int f){
+            return f>0 ? f : -f;
+        }
+    };
+
+    void main()
+    {
+        float f = -123.45;
+        dunno aObj;
+        int something_f = aObj(f);
+        cout << "f = " << f << " something_f = " << something_f << endl;
+    }
+
+What happens when you run the above code?
+
+Choices:
+-> a. `f = -123.45 something_f = 123.45`
+   b. None of these is the correct output.
+   c. Compilation error
+   d. `f = 123.45 something_f = -123.45`
+   e. Runtime error
+Your answer was incorrect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the level order traversal of the following binary tree, which is the
+last node that will be dequeued before the node 9 is enqueued?
+
+    4 -> {
+        6 -> { 22, 5 },
+        7 -> {
+            9, { 8 -> 2 }
+        }
+    }
+
+Choices:
+   a. None of the options is correct
+   b. 6
+   c. 8
+   d. 4
+-> e. 7
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Which of the following could not be a path in a binary search tree?
+
+Choices:
+-> a. `15, 982, 178, 645, 207, 517, 208, 223`
+   b. `995, 353, 254, 498, 223`
+   c. `492, 125, 418, 197, 223`
+   d. `128, 735, 209, 245, 223`
+   e. None of the options is correct.
+Your answer was incorrect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the AVL Tree built by inserting the following sequence of
+integers, one at a time in the given order:
+
+    10, 15, 20, 13, 11
+
+Which of the following statements is true about the tree?
+
+Choices:
+   a. 11's left child is 10 and 15's left child is 13.
+   b. None of these answers is correct.
+-> c. 11's left child is 10 and 15's left child is 11.
+   d. 11's left child is NULL and 15's left child is 13.
+   e. 11's left child is NULL and 15's left child is 11.
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Which of the following collection of function signatures corresponds to
+the Dictionary ADT?
+
+Choices:
+   a. Exactly 2 of the other items can be considered to be Dictionaries.
+   b. ```
+      void insert(key, value)
+      void remove(key, value)
+      void find(key)
+      ```
+   c. ```
+      void insert(key, value)
+      key remove(value)
+      void find(value)
+      ```
+-> d. ```
+      void insert(key, value)
+      void remove(key)
+      value find(key)
+      ```
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Choose the appropriate running time from the list below.
+
+The variable $n$ represents the number of items (keys, data, or key/data
+pairs) in the structure. In answering this question you should assume
+the best possible implementation given the constraints, and also assume
+that every array is sufficiently large to handle all items (unless
+otherwise stated).
+
+Perform a level order traversal of a BST.
+
+Choices:
+   a. $O(n\log n)$
+-> b. $O(n)$
+   c. $O(n^2)$
+   d. $O(1)$
+   e. $O(\log n)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Choose the appropriate running time from the list below.
+
+The variable $n$ represents the number of items (keys, data, or key/data
+pairs) in the structure. In answering this question you should assume
+the best possible implementation given the constraints, and also assume
+that every array is sufficiently large to handle all items (unless
+otherwise stated).
+
+Worst case for finding a key in a Binary Search Tree (not necessarily
+AVL).
+
+Choices:
+   a. $O(\log n)$
+-> b. $O(n)$
+   c. $O(1)$
+   d. $O(n^2)$
+   e. $O(n\log n)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Choose the appropriate running time from the list below.
+
+The variable $n$ represents the number of items (keys, data, or key/data
+pairs) in the structure. In answering this question you should assume
+the best possible implementation given the constraints, and also assume
+that every array is sufficiently large to handle all items (unless
+otherwise stated).
+
+Perform rightLeftRotate around a given node in an AVL Tree.
+
+Choices:
+   a. $O(n^2)$
+-> b. $O(1)$
+   c. $O(n)$
+   d. $O(\log n)$
+   e. $O(n\log n)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Choose the appropriate running time from the list below.
+
+The variable $n$ represents the number of items (keys, data, or key/data
+pairs) in the structure. In answering this question you should assume
+the best possible implementation given the constraints, and also assume
+that every array is sufficiently large to handle all items (unless
+otherwise stated).
+
+Build an AVL tree with keys that are the numbers between $n$ and $0$, in
+that order, by repeated insertions into the tree.
+
+Choices:
+   a. $O(n^2)$
+   b. $O(\log n)$
+   c. $O(1)$
+   d. $O(n)$
+-> e. $O(n\log n)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+

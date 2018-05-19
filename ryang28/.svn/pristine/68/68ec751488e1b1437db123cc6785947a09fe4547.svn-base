@@ -1,0 +1,229 @@
+Exam 4 Multiple Choice Questions
+
+- These questions may not be in the same order as what you saw on the exam.
+- Your answer is indicated by a '->'
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+For a minHeap implementation, assume we use the 0th index of the array
+to store the root (instead of index 1). Given an element at position
+$i$, what would be the position of its left child (if one exists)?
+
+Choices:
+   a. $2i$
+   b. $2i - 1$
+-> c. $2i + 1$
+   d. $2i + 2$
+   e. None of other options
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the following disjoint sets:
+
+    \tikz [tree layout, minimum number of children=2, sibling distance=15mm, level distance=11mm,font=\Large,>=latex]
+    \graph {
+        1 <- {
+            0,
+            2 <- {
+                3,
+                4
+            }
+        },
+        7 <- {
+            6 <- {
+                5,
+                8
+            }
+        }
+    };
+
+Using our array implementation of disjoint sets with union-by-size and
+path compression, after the operations `Find(3)`,
+`Union(Find(4), Find(8))` and `Find(5)`, the resulting array is named
+`result`. Which of the following statements is incorrect? (Hint: in the
+array implementation of disjoint sets, keys are implicitly stored in
+array indices)
+
+Choices:
+-> a. `result[2]` is 1 and `result[8]` is 7
+   b. `result[4]` is 1 and `result[5]` is 1
+   c. `result[3]` is 1 and `result[7]` is 1
+   d. `result[4]` is 1 and `result[6]` is 7
+   e. `result[2]` is 1 and `result[4]` is 1
+Your answer was incorrect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+What is the minimum number of keys that can be stored in a B-Tree of
+height 30?
+
+Choices:
+   a. None of the other options are correct.
+   b. The answer cannot be determined by the given information.
+   c. $2^{29} − 1$
+-> d. $2^{31} − 1$
+   e. $2^{30} − 1$
+Your answer was incorrect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Which of the following trees is a Huffman Tree for the following string
+of characters?
+
+    b a b a b a c d c d c d
+
+Choices:
+   a.     \tikz [tree layout, minimum number of children=2, sibling distance=15mm, level distance=11mm,font=\Large,>=latex]
+          \graph {
+            n1 [as=\#] -> {
+                d,
+                n2 [as=\#] -> {
+                    c,
+                    n3 [as=\#] -> {
+                        b,
+                        a
+                    }
+                }
+            }
+          };
+-> b.     \tikz [tree layout, minimum number of children=2, sibling distance=15mm, level distance=11mm,font=\Large,>=latex]
+          \graph {
+            n1 [as=\#] -> {
+                n2 [as=\#] -> {
+                    a,
+                    b
+                },
+                n3 [as=\#] -> {
+                    c,
+                    d
+                }
+            }
+          };
+   c.     \tikz [tree layout, minimum number of children=2, sibling distance=15mm, level distance=11mm,font=\Large,>=latex]
+          \graph {
+            n1 [as=\#] -> {
+                n2 [as=\#] -> {
+                    n3 [as=\#] -> {
+                        c,
+                        d
+                    },
+                    a
+                },
+                b
+            }
+          };
+   d.     \tikz [tree layout, minimum number of children=2, sibling distance=15mm, level distance=11mm,font=\Large,>=latex]
+          \graph {
+            n1 [as=\#] -> {
+                a,
+                n2 [as=\#] -> {
+                    n3 [as=\#] -> {
+                        d,
+                        c
+                    },
+                    b
+                }
+            }
+          };
+   e. None of the other answers
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose that the set of loans made by a library is to be represented in
+a data structure. Each book in the library may be checked out only by a
+single library patron at a time. However, a single patron may be able to
+check out multiple books. To be able to efficiently determine which
+patron has a given book, the library data structure is best represented
+by a dictionary where:
+
+Choices:
+   a. a concatenated string `books+patrons` is the key and a boolean is the
+      value.
+   b. unique indices starting from 0 are the keys and the pair (books,patrons)
+      is the value.
+   c. the patrons are the keys and the books are the values.
+-> d. the books are the keys and the patrons are the values.
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The CS department wants to maintain a database of up to 1800 UINs of
+students who have taken CS 225 so that it can be determined very quickly
+whether or not a given student has taken the course. Speed of response
+is very important; efficient use of memory is also important, but not as
+important as speed of response. Which of the following data structures
+would be most appropriate for this task?
+
+Choices:
+   a. A hash table using probing with capacity 1800
+   b. A sorted linked list
+-> c. A hash table using probing with capacity 4500
+   d. A hash table using probing with capacity 100000
+   e. A sorted array with 1800 entries
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose you want to search an AVL tree holding integer keys for the
+smallest key that is a multiple of 7, if it exists. Which of the
+following is the tightest bound on the worst-case running time of the
+best possible algorithm?
+
+Choices:
+   a. $O(n^2)$
+   b. $O(\log n)$
+   c. None of the other answers
+   d. $O(n\log n)$
+   e. $O(1)$
+-> f. $O(n)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose a B-tree of order $m$ contains $n$ items. In the worst case,
+which expression gives the tightest upper bound on the number of disk
+seeks in one call to the `Find` function?
+
+Choices:
+   a. $O(m \log\_2n)$
+   b. $O(m \log\_mn)$
+   c. $O(m \log\_2m)$
+-> d. $O(\log\_mn)$
+   e. $O(\log\_2n)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+What is the worst case running time of the best algorithm to build a
+heap from an array containing $n$ items?
+
+Choices:
+-> a. $O(n)$
+   b. $O(\log n)$
+   c. $O(n\log n)$
+   d. $O(1)$
+   e. $O(n^2)$
+   f. None of the other answers
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose you implement a hash table with separate chaining, where instead
+of a linked list, you use an AVL Tree. What is the worst case running
+time for inserting 1 element into the hash table of size $n$ if resizing
+is set to occur every time any of the binary trees reach a size of $m$
+($m$ nodes are present in the binary tree).
+
+Choices:
+   a. $O(m)$
+-> b. $O(\log m)$
+   c. $O(n)$
+   d. None of the other options
+   e. $O(n \log m)$
+   f. $O(m + n)$
+Your answer was correct.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+

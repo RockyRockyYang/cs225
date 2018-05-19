@@ -1,0 +1,31 @@
+TOTAL GRADE: 78.00/100.00
+             = 60*mc/8 + 40*code/10
+          where   mc = min(8,  11.00) = 8.00
+                code = min(10, 4.50) = 4.50
+
+Coding problems:
+(if you didn't submit anything, you won't get a report)
+
+4.50 /10.00  Animal Shelter 1a
+==============================
+ 1.50/3.00   Give Any Pet
+  :: -1.50  Misunderstood question/Pseudo Code/Wrong evaluation
+ 1.00/2.00   Give Pet Dog
+  :: -1.00  Messed up queue restructuring
+ 1.00/2.00   Give Pet Cat
+  :: -0.50  Incorrect retrieval of item from the data structure
+  :: -0.50  thanks_for_adopting() not called or called erroneously
+ 0.00/2.00   Add Animal
+  :: -0.50  If pointer ->, . is messed up
+  :: -0.50  If thanks_for_rescue() not called
+  :: -1.00  If the conditionals are wrong
+ 1.00/1.00   Data Structures for Cat and Dog
+  :: +0.00  Manual Adjustment
+Score: 4.50/10.00
+
+0.00 /10.00  Games Night 03
+===========================
+ 0.00/10.00  Reorganize List
+  :: +0.00  Code does not follow prompt / No code
+Score: 0.00/10.00
+

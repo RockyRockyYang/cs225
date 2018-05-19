@@ -1,0 +1,24 @@
+Grading r42986 by ryang28 committed on Mon Apr 25 20:37:24 CDT 2016
+Monad Autograder
+Testing mp7.1 at 2016-04-27 00:23:04
+
+"Honestly, if you don't fit in, then you're probably doing the right thing." ~ LIGHTS
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+addElements1 . . . . [20 pts] - passed
+addElements2 . . . . [20 pts] - passed
+testFindAndSetUnion1 [20 pts] - passed
+testFindAndSetUnion2 [20 pts] - passed
+testFindAndSetUnion3 [20 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

@@ -1,0 +1,23 @@
+Grading r25588 by ryang28 committed on Sat Mar 12 19:31:44 CST 2016
+Monad Autograder
+Testing lab_trees at 2016-03-14 00:16:41
+
+"It'll work, the stack's just not big enough." ~ Eric Rosenberg
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_isOrdered  . [33 pts] - passed
+test_mirror . . . [33 pts] - passed
+test_printPaths . [34 pts] - passed
+test_sumDistances [25 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 125
+

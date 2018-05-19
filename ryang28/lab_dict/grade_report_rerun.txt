@@ -1,0 +1,27 @@
+Grading r31027 by ryang28 committed on Mon Mar 28 20:16:30 CDT 2016
+Monad Autograder
+Testing lab_dict at 2016-03-29 00:22:45
+
+"I don't say anything interesting." ~ Tom Bogue
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_get_anagrams  . . . . [15 pts] - passed
+test_get_all_anagrams  . . [15 pts] - passed
+test_fib . . . . . . . . . [5 pts]  - passed
+test_memoized_fib  . . . . [15 pts] - passed
+test_homophones  . . . . . [10 pts] - passed
+test_cartalk_puzzle  . . . [10 pts] - passed
+test_get_common_words_3  . [15 pts] - passed
+test_get_common_words_3000 [15 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
